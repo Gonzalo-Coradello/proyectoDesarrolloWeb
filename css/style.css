@@ -614,7 +614,7 @@ footer{
 /* footer */
 .scaleIcons:hover{
     transform: scale(1.2);
-    transition: 0.25s;
+    transition: transform .25s;
 }
 
 /* contact.html */
@@ -626,3 +626,115 @@ footer{
     transform: scale(1.7);
 }
 
+/* animación about */
+@keyframes aparecer{
+    0% {
+        position: relative;
+        left: -120%;
+    }
+
+    100% {
+        position: relative;
+        left: 0;
+    }
+}
+
+@keyframes aparecer2{
+    0% {
+        position: relative;
+        left: -1000px;
+    }
+
+    100% {
+        position: relative;
+        left: 0;
+    }
+}
+
+.animation{
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: 0;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation2{
+    position: relative;
+    left: -120%;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation3{
+    position: relative;
+    left: -100%;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: .75s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation4{
+    position: relative;
+    left: -100%;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: 1.25s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation5{
+    position: relative;
+    left: -100%;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: 1.75s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation6{
+    position: relative;
+    left: -100%;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation7{
+    position: relative;
+    left: -100%;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: 2.25s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation8{
+    position: relative;
+    left: -1000px;
+    animation-name: aparecer2;
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation9{
+    position: relative;
+    left: -1000px;
+    animation-name: aparecer2;
+    animation-duration: 1s;
+    animation-delay: 2.75s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
