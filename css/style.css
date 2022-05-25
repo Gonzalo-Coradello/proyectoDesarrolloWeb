@@ -327,6 +327,7 @@ footer{
     display: flex;
     justify-content: space-between;
     align-self: center;
+    padding: 0 .4rem;
 }
 .contactButton{
     grid-area: contactButton;
@@ -608,3 +609,20 @@ footer{
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
+/* Iconos de redes sociales */
+/* footer */
+.scaleIcons:hover{
+    transform: scale(1.2);
+    transition: 0.25s;
+}
+
+/* contact.html */
+.contactIcons a{
+    transform: scale(1.4);
+}
+
+.contactIcons a:hover{
+    transform: scale(1.7);
+}
+
