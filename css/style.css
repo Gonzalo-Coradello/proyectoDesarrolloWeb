@@ -9,6 +9,11 @@ html{
     font-size: 62.5%;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 /* Estilo de texto */
 h1, h2, li{
     font-family: 'Lato', sans-serif;
@@ -85,6 +90,10 @@ p{
     color: #FFF
 }
 
+.headerDark a:hover{
+    color: #FFF
+}
+
 /* Estilos básicos para todos los HTML */
 header{
     padding: 3.5rem;
@@ -109,9 +118,9 @@ a{
     color: #000;
 }
 
-/* a:hover{
-    text-decoration: underline;
-} */
+a:hover{
+    color: #000;
+}
 
 footer{
     background-color: #1C1C1E;
@@ -120,6 +129,10 @@ footer{
 }
 
 footer div a{
+    color: #FFF;
+}
+
+footer div a:hover{
     color: #FFF;
 }
 
@@ -180,7 +193,8 @@ footer div a{
 
 /* Portfolio Grid */
 /* Usé las mismas clases y los mismos grid-areas para el index.html y el work.html */
-#projectsIndexGrid{
+
+/* #projectsIndexGrid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 4rem 1fr 1fr 4rem;
@@ -259,7 +273,7 @@ footer div a{
 
 .project1img, .project2img, .project3img{
     width: 99.8%;
-}
+} */
 
 /* Footer con Grid (para todos los HTML) */
 footer{
@@ -605,6 +619,10 @@ footer{
     color: #FFF;
 }
 
+.underlineAnimationWhite:hover{
+    color: #FFF;
+}
+
 .underlineAnimation:hover::after, .underlineAnimationWhite:hover::after{
     transform: scaleX(1);
     transform-origin: bottom left;
@@ -737,4 +755,25 @@ footer{
     animation-delay: 2.75s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
+}
+
+/* Bootstrap */
+
+/* Layout portfolio */
+.infoContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.project{
+    border: 1px solid #000;
+    margin-right: 2rem;
+    margin-left: 2.5rem;
+    padding: 2rem;
+    height: 100%;
+}
+
+.projectImg{
+    object-fit: cover;
+    padding: 0;
 }
