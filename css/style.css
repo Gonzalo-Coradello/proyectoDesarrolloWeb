@@ -123,6 +123,10 @@ a:hover{
     color: #000;
 }
 
+.active{
+    opacity: .5;
+}
+
 footer{
     background-color: #1C1C1E;
     color: white;
@@ -439,10 +443,6 @@ footer{
 
     .navbarDesktop{
         display: none;
-    }
-
-    .active{
-        opacity: .5;
     }
 
     /* index */
