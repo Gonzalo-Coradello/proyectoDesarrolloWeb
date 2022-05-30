@@ -13,14 +13,32 @@
     <script src="https://kit.fontawesome.com/5cf2c2763c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
-        <h1 id="top">Gonzalo Coradello</h1>
-        <nav>
+    <header class="header" id="top">
+        <h1>Gonzalo Coradello</h1>
+        <nav class="navbarDesktop">
             <ul>
                 <li><a class="underlineAnimation" href="./pages/about.html">Acerca de mí.</a></li>
                 <li><a class="underlineAnimation" href="./pages/work.html">Portfolio.</a></li>
                 <li><a class="underlineAnimation" href="./pages/contact.html">Contacto.</a></li>
             </ul>
+        </nav>
+
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="navbarMenu">
+                <ul>
+                    <li class="navAbout"><a class="underlineAnimation" href="./pages/about.html">Acerca de mí.</a></li>
+                    <li class="navWork"><a class="underlineAnimation" href="./pages/work.html">Portfolio.</a></li>
+                    <li class="navContact"><a class="underlineAnimation" href="./pages/contact.html">Contacto.</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark navbarMobile">
+            <div class="container-fluid navbarFlex">
+              <button class="navbar-toggler navButton" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <h2>Gonzalo Coradello</h2>
+            </div>
         </nav>
     </header>
     <main>
@@ -43,36 +61,23 @@
             <h3 id="aboutButton" class="underlineAnimation"><a href="./pages/about.html">Más sobre mí</a></h3>
         </section>
         <section>
-            <div class="projects row gy-5">
+            <div class="projects row">
                 <h2>Proyectos recientes</h2>
-                <div class="col-xl-4 col-12">
+                <div class="projectDiv col-xl-4 col-md-4 col-12">
                     <div class="project">
                         <h3>Mi portfolio</h3>
                         <p>Esta página es mi primer proyecto de Desarrollo Web. Forma parte de mi portfolio y la idea es que contenga todos mis futuros proyectos.</p>
                     </div>
                 </div>
-                    <img src="./img/portfolioHome.jpg" alt="Portfolio" class="projectImg col-xl-8 col-12">
-                    <div class="col-xl-4 col-12">
+                    <img src="./img/portfolioHome.jpg" alt="Portfolio" class="projectImg col-xl-8 col-md-8 col-12">
+                    <div class="projectDiv col-xl-4 col-md-4 col-12">
                         <div class='project'>
                             <h3>Otro proyecto</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus pariatur dignissimos labore eligendi temporibus numquam et similique assumenda minus sequi, laboriosam cumque vero totam quam. Quas debitis vitae beatae eaque itaque soluta rem sunt quasi?</p>
                         </div>
                     </div>
-                    <img src="./img/otroProyecto.jpg" alt="Otro proyecto" class="projectImg col-xl-8 col-12">
-
-                    <!-- <section class="projects row gy-5">
-            <h2>Mis proyectos</h2>
-            <div class="project col-xl-3 col-12">
-                <h3>Mi portfolio</h3>
-                <p>Esta página es mi primer proyecto de Desarrollo Web. Forma parte de mi portfolio y la idea es que contenga todos mis futuros proyectos.</p>
-            </div>
-            <img src="../img/portfolioHome.jpg" alt="Portfolio" class="projectImg col-xl-8 col-12">
-            <div class="project col-xl-4 col-12">
-                <h3>Otro proyecto</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus pariatur dignissimos labore eligendi temporibus numquam et similique assumenda minus sequi, laboriosam cumque vero totam quam. Quas debitis vitae beatae eaque itaque soluta rem sunt quasi?</p>
-            </div>
-            <img src="../img/otroProyecto.jpg" alt="Otro proyecto" class="projectImg col-xl-8 col-12"> -->
-                <h3 class="allProjects"><a class="underlineAnimationWhite" href="./pages/work.html">Todos mis proyectos</a></h3>
+                    <img src="./img/otroProyecto.jpg" alt="Otro proyecto" class="projectImg col-xl-8 col-md-8 col-12">
+                <h3 class="allProjects d-flex justify-content-center"><a class="underlineAnimationWhite" href="./pages/work.html">Todos mis proyectos</a></h3>
             </div>
         </section>
     </main>

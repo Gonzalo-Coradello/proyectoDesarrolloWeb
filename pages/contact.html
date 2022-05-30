@@ -13,14 +13,32 @@
     <script src="https://kit.fontawesome.com/5cf2c2763c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="headerDark">
-        <h1 id="contactTop"><a class="underlineAnimationWhite" href="../index.html">Gonzalo Coradello</a></h1>
-        <nav>
+    <header class="headerDark" id="contactTop">
+        <h1><a class="underlineAnimationWhite" href="../index.html">Gonzalo Coradello</a></h1>
+        <nav class="navbarDesktop">
             <ul>
                 <li><a class="underlineAnimationWhite" href="./about.html">Acerca de mí.</a></li>
                 <li><a class="underlineAnimationWhite" href="./work.html">Portfolio.</a></li>
                 <li class="hide">Contacto.</li>
             </ul>
+        </nav>
+
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="navbarMenuDark">
+                <ul>
+                    <li class="navAbout"><a class="underlineAnimation" href="./about.html">Acerca de mí.</a></li>
+                    <li class="navWork"><a class="underlineAnimation" href="./work.html">Portfolio.</a></li>
+                    <li class="navContact active">Contacto.</li>
+                </ul>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark navbarMobile">
+            <div class="container-fluid navbarFlex">
+              <button class="navbar-toggler navButtonDark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <h2><a href="../index.html">Gonzalo Coradello</a></h2>
+            </div>
         </nav>
     </header>
     <main class="contact">
@@ -32,22 +50,20 @@
             <a class="scaleIcons" href="https://github.com/Gonzalo-Coradello" target="_blank"><i class="fa-brands fa-github-square fa-2xl"></i></a>
         </div>
         <div class="contactForm">
-            <div>
-                <h3>Nombre</h3>
-                <p>(Escribe tu nombre)</p>
+            <div class="form-floating mb-3 formDiv">
+                <input type="text" class="form-control inputMod" id="floatingInput" placeholder="Escribe tu nombre">
+                <label for="floatingInput">Nombre</label>
             </div>
-            <div>
-                <h3>Correo electrónico</h3>
-                <p>(Ejemplo@gmail.com)</p>
+            <div class="form-floating mb-3 formDiv">
+                <input type="email" class="form-control inputMod" id="floatingInput" placeholder="nombre@ejemplo.com">
+                <label for="floatingInput">Correo electrónico</label>
             </div>
-            <div>
-                <h3>Mensaje</h3>
-                <p>(Escribe tu mensaje)</p>
+            <div class="form-floating formDiv">
+                <textarea class="form-control mensajeForm inputMod" placeholder="Escribe tu mensaje" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea">Mensaje</label>
             </div>
         </div>
-        <div class="contactButton">
-            <h3>Enviar</h3>
-        </div>
+        <button type="submit" class="btn btn-primary contactButton">Enviar</button>
     </main>
     <footer>
         <h4 class="gonzalo">Gonzalo Coradello</h4>

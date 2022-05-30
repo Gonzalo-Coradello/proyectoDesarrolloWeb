@@ -13,14 +13,32 @@
     <script src="https://kit.fontawesome.com/5cf2c2763c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="headerDark">
-        <h1 id="aboutTop"><a class="underlineAnimationWhite" href="../index.html">Gonzalo Coradello</a></h1>
-        <nav>
+    <header class="headerDark" id="aboutTop">
+        <h1><a class="underlineAnimationWhite" href="../index.html">Gonzalo Coradello</a></h1>
+        <nav class="navbarDesktop">
             <ul>
                 <li>Acerca de mí.</li>
                 <li><a class="underlineAnimationWhite" href="./work.html">Portfolio.</a></li>
                 <li><a class="underlineAnimationWhite" href="./contact.html">Contacto.</a></li>
             </ul>
+        </nav>
+
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="navbarMenuDark">
+                <ul>
+                    <li class="navAbout active">Acerca de mí</li>
+                    <li class="navWork"><a class="underlineAnimation" href="./work.html">Portfolio.</a></li>
+                    <li class="navContact"><a class="underlineAnimation" href="./contact.html">Contacto.</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark navbarMobile">
+            <div class="container-fluid navbarFlex">
+              <button class="navbar-toggler navButtonDark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <h2><a href="../index.html">Gonzalo Coradello</a></h2>
+            </div>
         </nav>
     </header>
     <main>
@@ -61,7 +79,7 @@
             </div>
         <section class="cv">
             <h2 class="animation8">Mi CV</h2>
-            <h3 class="animation9">Descargalo haciendo click <a class="underlineAnimation" href="">aquí</a></h3>
+            <h3 class="animation9">Descargalo haciendo click <button type="button" class="btn btn-outline-dark btnMod">aquí</button></h3>
         </section> 
     </main>
     <footer>
