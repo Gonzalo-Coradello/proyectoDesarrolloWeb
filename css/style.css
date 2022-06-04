@@ -22,14 +22,14 @@ h1, h2, li{
 }
 
 h3, h4{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     font-size: 1.6rem;
     margin: 0.5rem 0;
 }
 
 p{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 1.6rem;
     line-height: 2.5rem;
@@ -167,7 +167,7 @@ footer div a:hover{
 #aboutButton{
     margin: 2rem auto;
     text-align: center;
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
 }
 #wideImg{
     width: 98.5vw;
@@ -319,6 +319,7 @@ footer{
 }
 
 .inputMod{
+    font-family: "Open Sans", sans-serif;
     font-size: 1.2rem;
 }
 
