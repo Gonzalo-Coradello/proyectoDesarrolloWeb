@@ -1,797 +1,698 @@
-/* General */
-*{
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 
 html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Estilo de texto */
-h1, h2, li{
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    font-size: 2rem;
+h1, h2, li {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
 }
 
-h3, h4{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 500;
-    font-size: 1.6rem;
-    margin: 0.5rem 0;
+h3, h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin: 0.5rem 0;
 }
 
-p{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: 1.6rem;
-    line-height: 2.5rem;
-    text-align: justify;
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  text-align: justify;
 }
 
-.white{
-    color: #FFF;
+.navbarMobile {
+  display: none;
 }
-
-/* Clases */
-/* Home - About */
-.cardLeft, .cardRight{
-    width: 60%;
-    border: 1px solid black;
-    padding: 2rem;
-    margin-top: 2rem;
-}
-
-.cardLeft div, .cardRight div{
-    text-align: justify;
-    padding-right: 2rem;
-}
-
-.cardLeft img, .cardRight img{
-    width: 25rem;
-}
-
-.cardRight div{
-    text-align: justify;
-    padding-left: 20px;
-}
-
-/* Home - Portfolio */
-.projects{
-    background-color: #1C1C1E;
-    color: white;
-    padding-top: 2rem;
-    padding-left: 2rem;
-}
-
-.projects img{
-    border: 1px solid #000;
-}
-
-/* Contacto */
-.contact{
-    padding: 2rem 8rem;
-}
-
-/* Contacto - About */
-.headerDark{
-    display: flex;
-    justify-content: space-between;
-    background-color: #1C1C1E;
-    color: #FFF;
-}
-.headerDark a{
-    color: #FFF
-}
-
-.headerDark a:hover{
-    color: #FFF
-}
-
-/* Estilos básicos para todos los HTML */
-header{
-    padding: 3.5rem;
-}
-
-.header{
-    display: flex;
-    justify-content: space-between;
-}
-
-ul{
-    list-style-type: none;
-}
-
-nav ul li{
-    display: inline-block;
-    padding-right: 1.5rem;
-}
-
-a{
-    text-decoration: none;
-    color: #000;
-}
-
-a:hover{
-    color: #000;
-}
-
-.active{
-    opacity: .5;
-}
-
-footer{
-    background-color: #1C1C1E;
-    color: white;
-    padding: 2rem;
-}
-
-footer div a{
-    color: #FFF;
-}
-
-footer div a:hover{
-    color: #FFF;
-}
-
-/* Flex y grids */
-/* about, index */
-
-.about{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.cardLeft{
-    display: flex;
-    flex-direction: row;
-    align-self: flex-start;
-    align-items: flex-start;
-    margin-left: 8rem;
-}
-.cardRight{
-    display: flex;
-    flex-direction: row-reverse;
-    align-self: flex-end;
-    align-items: flex-start;
-    margin-right: 8rem;
-}
-#aboutButton{
-    margin: 2rem auto;
-    text-align: center;
-    margin-bottom: 3rem;
-}
-#wideImg{
-    width: 98.5vw;
-    height: 40rem;
-}
-
-#wideImg img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.aboutMe{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2rem 8rem;
-    padding: 2rem;
-    text-align: justify;
-}
-
-.cv{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2rem 0;
-    line-height: 1.5;
-}
-
-.allProjects{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-/* Footer con Grid (para todos los HTML) */
-footer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "gonzalo . contactame"
-    "copyright scrollUp footerIcons";
-    align-items: center;
-    border-top: 1px solid #000;
-}
-
-.gonzalo{
-    grid-area: gonzalo;
-}
-.copyright{
-    grid-area: copyright;
-}
-.contactame{
-    grid-area: contactame;
-    justify-self: flex-end;
-}
-.footerIcons{
-    grid-area: footerIcons;
-    width: 8.5rem;
-    justify-self: flex-end;
-    display: flex;
-    justify-content: space-between;
-}
-.scrollUp{
-    grid-area: scrollUp;
-    justify-self: center;
-}
-
-/* Contacto Grid */
-.contact{
-    display: grid;
-    grid-template-columns: 50rem 50rem;
-    grid-template-rows: 4rem 1fr 4rem;
-    grid-template-areas:
-    "h2 ."
-    "contactImage contactForm"
-    "contactIcons contactButton";
-    column-gap: 4rem;
-}
-
-.contact h2{
-    grid-area: h2;
-    align-self: center;
-}
-.contact img{
-    grid-area: contactImage;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-.contactForm{
-    grid-area: contactForm;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-.contactIcons{
-    grid-area: contactIcons;
-    display: flex;
-    justify-content: space-between;
-    align-self: center;
-    padding: 0 .4rem;
-}
-.contactButton{
-    grid-area: contactButton;
-    align-self: center;
-    justify-self: center;
-}
-
-
-/* Bootstrap */
-
-/* Layout portfolio */
-/* Eliminé los grids de index y work.html y realicé el layout responsive con Bootstrap */
-
-.project{
-    border: 1px solid #000;
-    margin-right: 2rem;
-    margin-left: 2.5rem;
-    padding: 2rem;
-    height: 100%;
-}
-
-.projectDiv{
-    margin-top: 2rem;
-}
-
-.projectImg{
-    object-fit: cover;
-    padding: 0;
-    margin-top: 2rem;
-}
-
-.info{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-/* Contact.html */
-
-.contactForm{
-    width: 100%;
-}
-
-.formDiv{
-    width: 100%;
-    font-size: 1.2rem;
-}
-
-.inputMod{
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.2rem;
-}
-
-.mensajeForm{
-    height: 40rem !important;
-    width: 100%;
-}
-
-.contactButton{
-    background-color: #1C1C1E;
-    transform: scale(1.2);
-    transition: transform .2s;
-    border: none;
-}
-
-.contactButton:hover{
-    background-color: #1C1C1E;
-    transform: scale(1.4);
-}
-
-.contactButton:focus{
-    background-color: #1C1C1E;
-}
-
-/* about.html */
-.btnMod{
-    font-size: inherit;
-}
-
-.btnMod:hover{
-    background-color: #FFF;
-    color: #000;
-}
-
-
-/* header (todos los HTML) */
-.navbarMobile{
-    display: none;
-}
-
-
-/* Responsive design / Media queries */
-/* mobile */
 @media screen and (max-width: 480px) {
-
-    /* Header (todos los HTML) */
-
-    header{
-        max-width: 100vw;
-    }
-
-    .header, .headerDark{
-        padding: 1rem;
-        flex-direction: column;
-    }
-
-    .header nav ul, .headerDark nav ul{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-    }
-
-    .header h1, .headerDark h1{
-        align-self: center;
-        padding: 1rem 0;
-    }
-
-    h1{
-        display: none;
-    }
-
-    .navbarMobile{
-        display: flex;
-        margin: 0;
-        align-items: center;
-    }
-
-    .navbarFlex{
-        flex-direction: row-reverse;
-    }
-
-    .navButton{
-        background-color: #1C1C1E;
-    }
-
-    .navButtonDark{
-        background-color: #040404;
-    }
-
-    .navbarMenu ul, .navbarMenuDark ul{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "about work contact";
-        padding: 0;
-        align-items: center;
-    }
-
-    .navbarMenu, .navbarMenuDark{
-        margin-right: .5rem;
-        margin-left: .8rem;
-    }
-
-    .navAbout{
-        grid-area: about;
-        justify-self: flex-start;
-    }
-
-    .navWork{
-        grid-area: work;
-        justify-self: center;
-    }
-
-    .navContact{
-        grid-area: contact;
-        justify-self: flex-end;
-    }
-
-    .navbarMenuDark{
-        background-color: #1C1C1E;
-    }
-
-    .navbarDesktop{
-        display: none;
-    }
-
-    /* index */
-    #wideImg{
-        width: 100vw;
-        height: 90vh;
-    } 
-
-    #aboutButton{
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-        margin: 0;
-    }
-
-    /* about */
-    .aboutMe{
-        margin: 2.5rem;
-        padding: 0;
-        padding-bottom: 2rem;
-        border-bottom: 1px solid #000;
-    }
-
-    .cardLeft, .cardRight{
-        width: 98vw;
-        margin: 0;
-        padding: 1rem;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-self: center;
-        border: none;
-        border-bottom: 1px solid #000;
-    }
-
-    .cardLeft img, .cardRight img{
-        width: 85%;
-        margin: 1rem 0;
-    }
-
-    .cardLeft div, .cardRight div{
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-
-    /* work */
-    .projects{
-        padding: 0;
-        padding-top: 1rem;
-    }
-
-    .projects h2{
-        padding-left: 1.5rem;
-        padding-top: 1.5rem;
-    }
-
-    .project{
-        border: none;
-        padding: 0;
-        margin: 0;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        width: fit-content;
-    }
-
-    /* contact */
-    .contact{
-        grid-template-columns: 1fr;
-        grid-template-rows: 10rem 1fr 8rem 1fr 6rem;
-        grid-template-areas: 
-        "h2"
-        "contactImage"
-        "contactIcons"
-        "contactForm"
-        "contactButton";
-        height: auto;
-        width: 100vw;
-        padding: 0;
-    }
-
-    .contact h2{
-        justify-self: center;
-    }
-
-    .contact img{
-        width: 100vw;
-        height: 100%;
-        object-fit: cover;
-        border-top: 1px solid #000;
-    }
-
-    .contactIcons{
-        justify-content: space-around;
-        height: 8rem;
-        align-items: center;
-        border-bottom: 1px solid #000;
-    }
-
-    .contactForm{
-        justify-content: space-evenly;
-        align-items: flex-start;
-        justify-self: center;
-    }
-
-    .contactForm{
-       width: 90%;
-       margin-top: 2rem;
-       justify-content: flex-start;
-    }
-
-    .mensajeForm{
-        height: 20rem;
-    }
-
-    /* Footer (todos los HTML) */
-    footer{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5 1fr);
-        grid-template-areas: 
-        "gonzalo"
-        "contactame"
-        "footerIcons"
-        "copyright"
-        "scrollUp";
-        justify-items: center;
-        align-items: center;
-    }
-    .contactame, .footerIcons{
-        justify-self: center;
-        margin-bottom: 1rem;
-    }
+  .navbarMobile {
+    display: flex;
+    margin: 0;
+    align-items: center;
+  }
 }
 
-/* tablet */
-@media screen and (max-width: 1024px) and (min-width: 768px){
-
-    #wideImg{
-        width: 100vw;
-        object-fit: cover;
-    }
-
-    .cardLeft, .cardRight{
-        margin-left: 0;
-        margin-right: 0;
-        width: 85%;
-        padding: 1rem;
-    }
-
-    .allProjects{
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .project{
-        padding: 1rem;
-        justify-self: flex-start;
-        width: 100%;
-        margin: 0;
-    }
-
-    .projectDiv{
-        margin-top: .5rem;
-        margin-bottom: .5rem;
-    }
-
-    .projectImg{
-        object-fit: cover;
-        margin-top: .5rem;
-        margin-bottom: .5rem;
-    }
-
-    .info{
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .contact{
-        padding: 2rem;
-        grid-template-columns: 1fr 1fr;
-    }
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 3.5rem;
+  background-color: #F4F4F4;
+}
+@media screen and (max-width: 480px) {
+  .header {
+    max-width: 100vw;
+    padding: 1rem;
+    flex-direction: column;
+  }
+  .header h1 {
+    display: none;
+  }
 }
 
-/* Animaciones, transformaciones, gradientes */
-
-/* Animación para los anchor */
-
-.underlineAnimation, .underlineAnimationWhite{
-    display: inline-block;
-    position: relative;
+.headerDark {
+  background-color: #121212;
+  color: #F4F4F4;
+}
+.headerDark a {
+  color: #F4F4F4;
+}
+.headerDark a:hover {
+  color: #F4F4F4;
 }
 
-.underlineAnimation::after, .underlineAnimationWhite::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+ul {
+  list-style-type: none;
+}
+ul li {
+  display: inline-block;
+  padding-right: 1.5rem;
 }
 
-.underlineAnimation::after{
-    background-color: #000;
+a {
+  text-decoration: none;
+  color: #121212;
+}
+a:hover {
+  color: #121212;
 }
 
-.underlineAnimationWhite::after{
-    background-color: #FFF;
+.active {
+  opacity: 0.5;
 }
 
-.underlineAnimationWhite{
-    color: #FFF;
+.main {
+  background-color: #F4F4F4;
 }
 
-.underlineAnimationWhite:hover{
-    color: #FFF;
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "gonzalo . contactame" "copyright scrollUp footerIcons";
+  background-color: #121212;
+  color: #F4F4F4;
+  align-items: center;
+  border-top: 1px solid #090909;
+  padding: 2rem;
+}
+footer a {
+  color: #F4F4F4;
+}
+footer a:hover {
+  color: #F4F4F4;
+}
+@media screen and (max-width: 480px) {
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5 1fr);
+    grid-template-areas: "gonzalo" "contactame" "footerIcons" "copyright" "scrollUp";
+    justify-items: center;
+    align-items: center;
+  }
 }
 
-.underlineAnimation:hover::after, .underlineAnimationWhite:hover::after{
-    transform: scaleX(1);
-    transform-origin: bottom left;
+.gonzalo {
+  grid-area: gonzalo;
+}
+
+.copyright {
+  grid-area: copyright;
+}
+
+.contactame {
+  grid-area: contactame;
+  justify-self: flex-end;
+}
+@media screen and (max-width: 480px) {
+  .contactame {
+    justify-self: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.footerIcons {
+  grid-area: footerIcons;
+  width: 8.5rem;
+  justify-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 480px) {
+  .footerIcons {
+    justify-self: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.scrollUp {
+  grid-area: scrollUp;
+  justify-self: center;
+}
+
+.navbarFlex {
+  flex-direction: row-reverse;
+}
+
+.navButton {
+  background-color: #1C1C1C;
+}
+
+.navButtonDark {
+  background-color: #121212;
+}
+
+.navbarMenuDark {
+  background-color: #121212;
+}
+
+.navbarMenu {
+  margin-right: 0.5rem;
+  margin-left: 0.8rem;
+}
+.navbarMenu ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "about work contact";
+  padding: 0;
+  align-items: center;
+}
+
+.navAbout {
+  grid-area: about;
+  justify-self: flex-start;
+}
+
+.navWork {
+  grid-area: work;
+  justify-self: center;
+}
+
+.navContact {
+  grid-area: contact;
+  justify-self: flex-end;
+}
+
+@media screen and (max-width: 480px) {
+  .navbarDesktop {
+    display: none;
+  }
+}
+.underlineAnimation, .underlineAnimationWhite {
+  display: inline-block;
+  position: relative;
+}
+.underlineAnimation::after, .underlineAnimationWhite::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: #121212;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.underlineAnimation:hover::after, .underlineAnimationWhite:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.underlineAnimationWhite {
+  color: #F4F4F4;
+}
+.underlineAnimationWhite:hover {
+  color: #F4F4F4;
+}
+.underlineAnimationWhite::after {
+  background-color: #F4F4F4;
 }
 
 /* Iconos de redes sociales */
 /* footer */
-.scaleIcons:hover{
-    transform: scale(1.2);
-    transition: transform .25s;
-}
-
-/* contact.html */
-.contactIcons a{
-    transform: scale(1.4);
-}
-
-.contactIcons a:hover{
-    transform: scale(1.7);
+.scaleIcons:hover {
+  transform: scale(1.2);
+  transition: transform 0.25s;
 }
 
 /* animación about */
-@keyframes aparecer{
-    0% {
-        position: relative;
-        left: -120%;
-    }
-
-    100% {
-        position: relative;
-        left: 0;
-    }
-}
-
-@keyframes aparecer2{
-    0% {
-        position: relative;
-        left: -1000px;
-    }
-
-    100% {
-        position: relative;
-        left: 0;
-    }
-}
-
-.animation{
-    animation-name: aparecer;
-    animation-duration: 1s;
-    animation-delay: 0;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-}
-
-.animation2{
+@keyframes aparecer {
+  0% {
     position: relative;
     left: -120%;
-    animation-name: aparecer;
-    animation-duration: 1s;
-    animation-delay: .5s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-}
-
-.animation3{
+  }
+  100% {
     position: relative;
-    left: -100%;
-    animation-name: aparecer;
-    animation-duration: 1s;
-    animation-delay: .75s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
+    left: 0;
+  }
 }
-
-.animation4{
-    position: relative;
-    left: -100%;
-    animation-name: aparecer;
-    animation-duration: 1s;
-    animation-delay: 1.25s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-}
-
-.animation5{
-    position: relative;
-    left: -100%;
-    animation-name: aparecer;
-    animation-duration: 1s;
-    animation-delay: 1.75s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-}
-
-.animation6{
-    position: relative;
-    left: -100%;
-    animation-name: aparecer;
-    animation-duration: 1s;
-    animation-delay: 2s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-}
-
-.animation7{
-    position: relative;
-    left: -100%;
-    animation-name: aparecer;
-    animation-duration: 1s;
-    animation-delay: 2.25s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-}
-
-.animation8{
+@keyframes aparecer2 {
+  0% {
     position: relative;
     left: -1000px;
-    animation-name: aparecer2;
-    animation-duration: 1s;
-    animation-delay: 2.5s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
+  }
+  100% {
+    position: relative;
+    left: 0;
+  }
+}
+.animation {
+  animation-name: aparecer;
+  animation-duration: 1s;
+  animation-delay: 0;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
 
-.animation9{
-    position: relative;
-    left: -1000px;
-    animation-name: aparecer2;
-    animation-duration: 1s;
-    animation-delay: 2.75s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
+.animation2 {
+  position: relative;
+  left: -120%;
+  animation-name: aparecer;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
+
+.animation3 {
+  position: relative;
+  left: -100%;
+  animation-name: aparecer;
+  animation-duration: 1s;
+  animation-delay: 0.75s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.animation4 {
+  position: relative;
+  left: -100%;
+  animation-name: aparecer;
+  animation-duration: 1s;
+  animation-delay: 1.25s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.animation5 {
+  position: relative;
+  left: -100%;
+  animation-name: aparecer;
+  animation-duration: 1s;
+  animation-delay: 1.75s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.animation6 {
+  position: relative;
+  left: -100%;
+  animation-name: aparecer;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.animation7 {
+  position: relative;
+  left: -100%;
+  animation-name: aparecer;
+  animation-duration: 1s;
+  animation-delay: 2.25s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.animation8 {
+  position: relative;
+  left: -1000px;
+  animation-name: aparecer2;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.animation9 {
+  position: relative;
+  left: -1000px;
+  animation-name: aparecer2;
+  animation-duration: 1s;
+  animation-delay: 2.75s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 50rem 50rem;
+  grid-template-rows: 4rem 1fr 4rem;
+  grid-template-areas: "h2 ." "contactImage contactForm" "contactIcons contactButton";
+  column-gap: 4rem;
+  padding: 2rem 8rem;
+}
+.contact h2 {
+  grid-area: h2;
+  align-self: center;
+}
+.contact img {
+  grid-area: contactImage;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 480px) {
+  .contact {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10rem 1fr 8rem 1fr 6rem;
+    grid-template-areas: "h2" "contactImage" "contactIcons" "contactForm" "contactButton";
+    height: auto;
+    width: 100vw;
+    padding: 0;
+  }
+  .contact h2 {
+    justify-self: center;
+  }
+  .contact img {
+    width: 100vw;
+    border-top: 1px solid #121212;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .contact {
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contactForm {
+  grid-area: contactForm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .contactForm {
+    align-items: flex-start;
+    justify-self: center;
+    width: 90%;
+    margin-top: 2rem;
+    justify-content: flex-start;
+  }
+}
+
+.contactIcons {
+  grid-area: contactIcons;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  padding: 0 0.4rem;
+}
+.contactIcons a {
+  transform: scale(1.4);
+}
+.contactIcons a:hover {
+  transform: scale(1.7);
+}
+@media screen and (max-width: 480px) {
+  .contactIcons {
+    justify-content: space-around;
+    height: 8rem;
+    align-items: center;
+    border-bottom: 1px solid #121212;
+  }
+}
+
+.contactButton {
+  grid-area: contactButton;
+  align-self: center;
+  justify-self: center;
+  background-color: #121212;
+  transform: scale(1.2);
+  transition: transform 0.2s;
+  border: none;
+}
+.contactButton:hover {
+  background-color: #121212;
+  transform: scale(1.4);
+}
+.contactButton:focus {
+  background-color: #121212;
+}
+
+.formDiv {
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.inputMod {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+}
+
+.mensajeForm {
+  height: 40rem !important;
+  width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .mensajeForm {
+    height: 20rem;
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 8rem;
+  text-align: justify;
+}
+@media screen and (max-width: 480px) {
+  .aboutMe {
+    padding: 2.5rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #121212;
+  }
+}
+
+.cardLeft {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  align-items: flex-start;
+  margin-left: 8rem;
+}
+
+.cardRight {
+  display: flex;
+  flex-direction: row-reverse;
+  align-self: flex-end;
+  align-items: flex-start;
+  margin-right: 8rem;
+}
+.cardRight div {
+  padding-left: 20px;
+}
+
+.cardLeft, .cardRight {
+  width: 60%;
+  border: 1px solid #121212;
+  padding: 2rem;
+  margin-top: 2rem;
+  background-color: #FFF;
+}
+.cardLeft div, .cardRight div {
+  text-align: justify;
+  padding-right: 2rem;
+}
+.cardLeft img, .cardRight img {
+  width: 25rem;
+}
+@media screen and (max-width: 480px) {
+  .cardLeft, .cardRight {
+    width: 98vw;
+    background-color: #F4F4F4;
+    margin: 0;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    border: none;
+    border-bottom: 1px solid #121212;
+  }
+  .cardLeft img, .cardRight img {
+    width: 85%;
+    margin: 1rem 0;
+  }
+  .cardLeft div, .cardRight div {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .cardLeft, .cardRight {
+    margin-left: 0;
+    margin-right: 0;
+    width: 85%;
+    padding: 1rem;
+  }
+}
+
+.cv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+  line-height: 1.5;
+}
+
+.allProjects {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.btnMod {
+  font-size: inherit;
+}
+.btnMod:hover {
+  background-color: #FFF;
+  color: #121212;
+}
+
+.projects {
+  background-color: #1C1C1C;
+  color: #F4F4F4;
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
+.projects img {
+  border: 1px solid #121212;
+}
+@media screen and (max-width: 480px) {
+  .projects {
+    padding: 0;
+    padding-top: 1rem;
+  }
+  .projects h2 {
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+  }
+}
+
+.project {
+  background-color: #121212;
+  border: 1px solid #090909;
+  margin-right: 2rem;
+  margin-left: 2.5rem;
+  padding: 2rem;
+  height: 100%;
+}
+@media screen and (max-width: 480px) {
+  .project {
+    background-color: #1C1C1C;
+    border: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: fit-content;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .project {
+    padding: 1rem;
+    justify-self: flex-start;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.projectDiv {
+  margin-top: 2rem;
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .projectDiv {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.projectImg {
+  object-fit: cover;
+  padding: 0;
+  margin-top: 2rem;
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .projectImg {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.info {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .info {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+#aboutButton {
+  margin: 2rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+@media screen and (max-width: 480px) {
+  #aboutButton {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin: 0;
+  }
+}
+
+#wideImg {
+  width: 100vw;
+  height: 40rem;
+}
+#wideImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 480px) {
+  #wideImg {
+    height: 90vh;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Estilo de texto */
+h1, h2, li{
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+h3, h4{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    text-align: justify;
+}
+
+// Estilos básicos
+
+.navbarMobile{
+    display: none;
+    @media screen and (max-width: 480px){
+        display: flex;
+        margin: 0;
+        align-items: center;
+    }
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 3.5rem;
+    background-color: $color-light;
+    @media screen and (max-width: 480px){
+        max-width: 100vw;
+        padding: 1rem;
+        flex-direction: column;
+        h1{
+            display: none;
+        }
+    }
+}
+
+.headerDark{
+    background-color: $color-black;
+    color: $color-light;
+    a{
+        color: $color-light;
+        &:hover{
+            color: $color-light;
+        }
+    }
+}
+
+ul{
+    list-style-type: none;
+    li{
+        display: inline-block;
+        padding-right: 1.5rem;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: $color-black;
+    &:hover{
+        color: $color-black;
+    }
+}
+
+.active{
+    opacity: .5;
+}
+
+.main{
+    background-color: $color-light;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "gonzalo . contactame"
+    "copyright scrollUp footerIcons";
+    background-color: $color-black;
+    color: $color-light;
+    align-items: center;
+    border-top: 1px solid #090909;
+    padding: 2rem;
+    a{
+        color: $color-light;
+        &:hover{
+            color: $color-light;
+        }
+    }
+    @media screen and (max-width: 480px){
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5 1fr);
+        grid-template-areas: 
+        "gonzalo"
+        "contactame"
+        "footerIcons"
+        "copyright"
+        "scrollUp";
+        justify-items: center;
+        align-items: center;
+    }
+}
+
+.gonzalo{
+    grid-area: gonzalo;
+}
+
+.copyright{
+    grid-area: copyright;
+}
+
+.contactame{
+    grid-area: contactame;
+    justify-self: flex-end;
+    @media screen and (max-width: 480px){
+        justify-self: center;
+        margin-bottom: 1rem;
+    }
+}
+
+.footerIcons{
+    grid-area: footerIcons;
+    width: 8.5rem;
+    justify-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 480px){
+        justify-self: center;
+        margin-bottom: 1rem;
+    }
+}
+
+.scrollUp{
+    grid-area: scrollUp;
+    justify-self: center;
+}
+
+// Navbar mobile, modificaciones al elemento de Bootstrap
+.navbarFlex{
+    flex-direction: row-reverse;
+}
+
+.navButton{
+    background-color: $color-dark;
+}
+
+.navButtonDark{
+    background-color: $color-black;
+}
+
+.navbarMenuDark{
+    background-color: $color-black;
+}
+
+.navbarMenu{
+    margin-right: .5rem;
+    margin-left: .8rem;
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "about work contact";
+        padding: 0;
+        align-items: center;
+    }
+}
+
+.navAbout{
+    grid-area: about;
+    justify-self: flex-start;
+}
+
+.navWork{
+    grid-area: work;
+    justify-self: center;
+}
+
+.navContact{
+    grid-area: contact;
+    justify-self: flex-end;
+}
+
+@media screen and (max-width: 480px){
+    .navbarDesktop{
+        display: none;
+    }
+}

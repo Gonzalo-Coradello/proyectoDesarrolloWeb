@@ -1,0 +1,152 @@
+// Animación para los anchor
+
+.underlineAnimation, .underlineAnimationWhite{
+    display: inline-block;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        background-color: $color-black;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    &:hover::after{
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+.underlineAnimationWhite{
+    color: $color-light;
+    &:hover{
+        color: $color-light;
+    }
+    &::after{
+        background-color: $color-light;
+    }
+}
+
+/* Iconos de redes sociales */
+/* footer */
+.scaleIcons:hover{
+    transform: scale(1.2);
+    transition: transform .25s;
+}
+
+/* animación about */
+@keyframes aparecer{
+    0% {
+        position: relative;
+        left: -120%;
+    }
+
+    100% {
+        position: relative;
+        left: 0;
+    }
+}
+
+@keyframes aparecer2{
+    0% {
+        position: relative;
+        left: -1000px;
+    }
+
+    100% {
+        position: relative;
+        left: 0;
+    }
+}
+
+.animation{
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: 0;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation2{
+    position: relative;
+    left: -120%;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation3{
+    position: relative;
+    left: -100%;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: .75s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation4{
+    position: relative;
+    left: -100%;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: 1.25s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation5{
+    position: relative;
+    left: -100%;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: 1.75s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation6{
+    position: relative;
+    left: -100%;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation7{
+    position: relative;
+    left: -100%;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: 2.25s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation8{
+    position: relative;
+    left: -1000px;
+    animation-name: aparecer2;
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animation9{
+    position: relative;
+    left: -1000px;
+    animation-name: aparecer2;
+    animation-duration: 1s;
+    animation-delay: 2.75s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
