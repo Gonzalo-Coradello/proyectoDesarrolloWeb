@@ -1,9 +1,26 @@
+// Variables
 // Colores
-
 $color-light: #F4F4F4;
 $color-dark: #1C1C1C;
 $color-black: #121212;
 
 // Border
-
 $borde: 1px solid $color-black;
+
+// Mixin
+@mixin cards ($flex-direction, $align-self, $margin) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-self: $align-self;
+    align-items: flex-start;
+    margin-left: $margin;
+    margin-right: $margin;
+}
+
+// Map
+$cards: (
+    width: 60%,
+    2rem: 2rem,
+    bgcolor: #FFF,
+    centro: center
+);

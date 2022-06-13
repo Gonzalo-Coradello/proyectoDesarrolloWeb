@@ -1,6 +1,6 @@
 // Animación para los anchor
 
-.underlineAnimation, .underlineAnimationWhite{
+.underlineAnimation{
     display: inline-block;
     position: relative;
     &::after{
@@ -22,6 +22,7 @@
 }
 
 .underlineAnimationWhite{
+    @extend.underlineAnimation;
     color: $color-light;
     &:hover{
         color: $color-light;
