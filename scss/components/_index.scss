@@ -12,10 +12,14 @@
 #wideImg{
     width: 100vw;
     height: 40rem;
+    clip-path: inset(0);
     img{
         width: 100%;
         height: 100%;
+        position: fixed;
         object-fit: cover;
+        left: 0;
+        top: 0;
     }
     @media screen and (max-width: 480px) {
         height: 90vh;
