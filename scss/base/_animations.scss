@@ -72,6 +72,14 @@
     animation-fill-mode: forwards;
 }
 
+.animation1{
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: -.2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
 .animation2{
     position: relative;
     left: -120%;

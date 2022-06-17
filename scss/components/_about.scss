@@ -8,13 +8,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4rem 8rem;
+    padding: 4rem 8rem 2rem;
     text-align: justify;
+    img{
+        border-radius: 50%;
+        width: 35rem;
+        margin-bottom: 2rem;
+    }
     @media screen and (max-width: 480px) {
         padding: 2.5rem;
         padding-bottom: 2rem;
         margin-bottom: 2rem;
         border-bottom: $borde;
+        img{
+            width: 70vw;
+        }
     }
 }
 
@@ -32,6 +40,17 @@
     img{
         width: 25rem;
     }
+}
+
+.cardRight{
+    @extend .cardLeft;
+    @include cards (row-reverse, flex-end, 8rem);
+    div{
+        padding-left: 20px;
+    }
+}
+
+.cardLeft, .cardRight{
     @media screen and (max-width: 480px){
         width: 98vw;
         background-color: $color-light;
@@ -48,8 +67,11 @@
             margin: 1rem 0;
         }
         div{
+            display: flex;
+            flex-direction: column;
             padding-left: 2rem;
             padding-right: 2rem;
+            align-items: map-get($cards, centro);
         }
     }
     @media screen and (max-width: 1024px) and (min-width: 768px){
@@ -57,14 +79,6 @@
         margin-right: 0;
         width: 85%;
         padding: 1rem;
-    }
-}
-
-.cardRight{
-    @extend .cardLeft;
-    @include cards (row-reverse, flex-end, 8rem);
-    div{
-        padding-left: 20px;
     }
 }
 
@@ -87,4 +101,8 @@
         background-color: #FFF;
         color: $color-black;
     }
+}
+
+.emoji:hover::after{
+    content: "🎹🤍💻";
 }
