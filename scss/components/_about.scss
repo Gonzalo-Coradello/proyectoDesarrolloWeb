@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+.aboutMe__text{
+    max-width: 80ch;
+}
+
 .aboutMe{
     display: flex;
     flex-direction: column;
